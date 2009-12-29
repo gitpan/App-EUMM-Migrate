@@ -6,6 +6,7 @@ WriteMakefile
           'NAME' => 'App::EUMM::Migrate',
           'VERSION_FROM' => 'lib/App/EUMM/Migrate.pm',
           'PREREQ_PM' => {
+                           'Data::Dumper' => '0',
                            'File::Slurp' => '0',
                            'Github::Fork::Parent' => '0',
                            'Test::More' => '0',

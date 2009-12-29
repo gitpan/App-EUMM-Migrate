@@ -1,6 +1,6 @@
 ---
 name: App-EUMM-Migrate
-version: 0.01
+version: 0.02
 author:
   - 'Alexandr Ciornii <alexchorny@gmail.com>'
 abstract: Perl tool to migrate from ExtUtils::MakeMaker to Module::Build
@@ -9,6 +9,7 @@ resources:
   license: http://www.gnu.org/licenses/gpl-3.0.txt
   repository: http://github.com/chorny/EUMM-migrate
 requires:
+  Data::Dumper: 0
   File::Slurp: 0
   Github::Fork::Parent: 0
   Text::FindIndent: 0
@@ -18,7 +19,7 @@ build_requires:
 provides:
   App::EUMM::Migrate:
     file: lib/App/EUMM/Migrate.pm
-    version: 0.01
+    version: 0.02
 generated_by: Module::Build version 0.33
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
