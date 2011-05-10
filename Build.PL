@@ -10,9 +10,10 @@ my $builder = Module::Build->new(
     dist_version_from   => 'lib/App/EUMM/Migrate.pm',
     requires => {
         'File::Slurp' => 0,
-        'Text::FindIndent' => 0,
-        'Github::Fork::Parent' => 0,
+        #'Text::FindIndent' => 0,
+        'Github::Fork::Parent' => 0.11,
         'Data::Dumper' => 0,
+        'Perl::Meta' => 0,
         'perl' => 5.006,
     },
     build_requires => {
@@ -31,6 +32,7 @@ my $builder = Module::Build->new(
     },
     add_to_cleanup      => [ 'App-EUMM-Migrate-*' ],
     create_makefile_pl => 'traditional',
+    auto_configure_requires => 0,
 );
 
 $builder->create_build_script();
